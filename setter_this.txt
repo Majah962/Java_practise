@@ -1,0 +1,51 @@
+
+class Frog {
+	private String name;
+	private int age;
+	
+	public void setName(String name) {
+		this.name = name;
+		// this. znaèi da je instanca ove gore kod private string name, 
+		//ona pripada objektu i klasi
+		//name; loklalna varijabla stringu name
+		//this.name=name i String name su INSTANCA ovom gore private string name
+		
+	}
+	//jako bitna linija koda
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public String getName() {
+		return name;
+	}
+		public int getAge() {
+			return age;
+		}
+		
+		public void setInfo(String name, int age) {
+			setName(name);
+			setAge(age);
+		}
+}
+
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		Frog frog1 = new Frog();
+		
+		//ovo je instance varijabla,kada stavimo PRIVATE više ju nemožemo pozivati nego moramo imati onu metodu dolje
+		//frog1.name ="Bertie";
+		//frog1.age = 1;
+		
+		//ovo je metoda 
+		frog1.setName("Bertie");
+		frog1.setAge(1);
+		
+		System.out.println(frog1.getName());
+		
+	}
+
+}

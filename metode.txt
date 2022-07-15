@@ -1,0 +1,39 @@
+//prvo sam kopirala podatke iz projekta klase i objekti
+class Person {
+
+	String name;
+	int age;
+
+	// metode, malo slovo uvijek "speak"
+	void speak() {
+		// ovu for petlju dodajemo da bi 3 puta ispisali
+		for(int i=0; i<3; i++) {
+			System.out.println("My name is: "+ name + "and I am " + age + " years old" );
+		}
+		
+	}
+	void sayHello()	{
+		System.out.println("Hello there");
+	}
+}
+
+public class Application {
+
+	public static void main(String[] args) {
+
+		Person person1 = new Person();
+		person1.name = "Maja Hercigonja";
+		person1.age = 20;
+		person1.speak();
+		person1.sayHello();
+
+		Person person2 = new Person();
+		person2.name = "Iva Iviæ";
+		person2.age = 30;
+		person1.speak();
+
+		System.out.println(person1.name);
+		
+	}
+
+}

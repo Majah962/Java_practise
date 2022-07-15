@@ -1,0 +1,52 @@
+class Person {
+	String name;
+	int age;
+	
+	void speak() {
+		System.out.println("My name is: " + name);
+	}
+	//umjesto void možemo staviti metodu int gdje vraæa podatke, 
+	//ali trebamo imati return da bi vidjeli što se vraæa
+	int calculateYearsToRetirement() {
+		int yearsLeft = 65 - age;	
+		
+		return yearsLeft;
+	}
+	
+	int getAge() {
+		return age;
+	}
+	
+	String getName() {
+		return name;
+	}
+}
+
+
+public class Application {
+
+	public static void main(String[] args) {
+		
+		Person person1 = new Person();
+		
+		person1.name ="Maja";
+		person1.age = 25;
+		
+		//ovo ispod smo stavili u // da nebi ponavljali dva puta moje ime
+		//person1.speak();
+		//za metodu int i return, 
+		int years = person1.calculateYearsToRetirement();
+		System.out.println("Years till retirements " + years);
+		
+		// za int getAge
+		int age = person1.getAge();
+		String name = person1.getName();
+		
+		System.out.println("Name is: " + name);
+		System.out.println("Age is: "+ age);
+		
+	}
+		
+			
+		
+}
